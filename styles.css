@@ -1,0 +1,648 @@
+:root {
+    --primary-color: #2f2f2f;         /* Gris grafito, sobrio y moderno */
+    --background-color: #f0f2f5;      /* Gris muy claro, limpio y neutro */
+    --text-color: #1e1e1e;            /* Gris casi negro para excelente legibilidad */
+    --card-background: #ffffff;       /* Blanco neutro para secciones o tarjetas */
+    --border-color: #c5c6c8;          /* Gris claro frío para bordes */
+    --highlight-color: #5c5c5c;       /* Gris medio para acentos y botones */
+  }
+  
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 2rem;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
+
+  .section {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .section h2 {
+    color: var(--highlight-color);
+    margin-bottom: 1rem;
+  }
+
+  .section h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .quote {
+    font-style: italic;
+    background: #e9f5ff;
+    border-left: 4px solid var(--highlight-color);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 6px;
+  }
+
+  .toggle {
+    cursor: pointer;
+    color: var(--highlight-color);
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  .content {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  /*SEGUNDA SECCION*/
+  ul {
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+  }
+  
+  ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+ 
+  /*RECURSOS INTERACTIVOS*/
+  .grid-resources {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .resource-card {
+    background-color: #e9f5ff;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 1.2rem;
+    border-radius: 12px;
+    border: 1px solid #cfe4f5;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .resource-card:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.2);
+  }
+  
+
+/*VENTAJAS DE PROGRAMAS SBC*/
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .advantage-card {
+    background: #f2faff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+    transition: transform 0.3s, background 0.3s;
+    border: 1px solid #d6eaff;
+  }
+  
+  .advantage-card i {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+  }
+  
+  .advantage-card p {
+    font-weight: 600;
+    color: var(--text-color);
+  }
+  
+  .advantage-card:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-5px);
+  }
+  
+  .advantage-card:hover i,
+  .advantage-card:hover p {
+    color: white;
+  }
+  
+  /*CASOS DE EXITO*/
+  .success-cases {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .case-card {
+    background-color: #f7fbff;
+    border-left: 6px solid var(--primary-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .case-card:hover {
+    background-color: #e3f2ff;
+    transform: translateY(-5px);
+  }
+  
+  .case-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-top: 4px;
+  }
+  
+  .case-card h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+  }
+  
+  .case-card p {
+    margin: 0.5rem 0 0 0;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+
+  /*PARTE II*/
+  .goal-block {
+    display: flex;
+    align-items: flex-start;
+    background-color: #e9f6ff;
+    border-left: 6px solid var(--primary-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    gap: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+  
+  .goal-block i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-top: 4px;
+  }
+  
+  .goal-block h4 {
+    margin: 0 0 0.5rem 0;
+    color: var(--text-color);
+  }
+  
+  .specific-goals h4 {
+    color: var(--text-color);
+    margin-top: 1.5rem;
+  }
+  
+  .specific-goals ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .specific-goals li {
+    background: #f4faff;
+    margin-bottom: 0.75rem;
+    padding: 1rem;
+    border-left: 5px solid var(--text-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: background 0.3s ease;
+  }
+  
+  .specific-goals li:hover {
+    background: #e0f4ff;
+  }
+  
+  .specific-goals i {
+    color: var(--text-color);
+    font-size: 1.2rem;
+  }
+  
+
+  /*MODELO DE RETROALIMENTACION POSITIVA*/
+  .feedback-model {
+    margin: 2rem 0;
+  }
+  
+  .steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .step-card {
+    background-color: #f0f9ff;
+    border-left: 6px solid var(--primary-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, background 0.3s ease;
+    text-align: center;
+  }
+  
+  .step-card:hover {
+    background-color: #e6f4ff;
+    transform: scale(1.03);
+  }
+  
+  .step-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .step-card h4 {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+  }
+  
+  .quote-box {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #e9f9f0;
+    border-left: 5px solid var(--primary-color);
+    font-style: italic;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+  
+  .quote-box span {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+
+
+
+
+ /*tabla 1*/
+ 
+ .timeline-section {
+    margin: 3rem 0;
+    padding: 1rem;
+  }
+  
+  .timeline {
+    position: relative;
+    margin: 0 auto;
+    padding-left: 30px;
+    border-left: 4px solid var(--primary-color);
+  }
+  
+  .timeline-item {
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .timeline-icon {
+    position: absolute;
+    left: -30px;
+    background-color: #fff;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+    font-size: 18px;
+  }
+  
+  .timeline-content {
+    background-color: #f1f9ff;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: background 0.3s;
+  }
+  
+  .timeline-content:hover {
+    background-color: #e6f0ff;
+  }
+  
+  .timeline-content h4 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .timeline-content p {
+    margin: 0.3rem 0;
+  }
+  
+  /*Estructura del Programa Propuesto*/
+/* Estilo base del acordeón */
+.accordion {
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Estilo de cada ítem del acordeón */
+  .accordion-item {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  /* Estilo del encabezado */
+  .accordion-header {
+    background-color: var(--highlight-color);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  /* Cambio de color al pasar el mouse */
+  .accordion-header:hover {
+    background-color: var(--text-color);
+  }
+  
+  /* Estilo del cuerpo del acordeón */
+  .accordion-body {
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+  }
+  
+  /* Estilo de las listas dentro de los cuerpos del acordeón */
+  .accordion-body ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+  
+  .accordion-body li {
+    margin: 5px 0;
+  }
+  
+
+  /*SECCION VIABILIDAD EFECTIVA*/
+
+  /* Estilo del título de la sección */
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+  }
+  
+  .section-title h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: left;
+  }
+  
+  .section-title p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* Contenedor de tarjetas */
+  .cards-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Estilo de cada tarjeta */
+  .card {
+    width: 240px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  /* Efecto cuando el ratón pasa sobre la tarjeta */
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Cabecera de la tarjeta */
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--highlight-color);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  /* Icono dentro de la cabecera */
+  .card-header i {
+    font-size: 1.5rem;
+  }
+  
+  /* Cuerpo de la tarjeta */
+  .card-body {
+    padding: 10px;
+    display: none; /* Inicialmente oculto */
+    color: white;
+  }
+  
+  /* Cita destacada */
+  .quote {
+    margin-top: 40px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-style: italic;
+    color: #333;
+  }
+  
+  /* Mostrar la tarjeta cuando se hace clic */
+  .card.show .card-body {
+    display: block;
+  }
+  
+
+  /*SECCION ENLACES*/
+  /* Estilo del título de la sección */
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .section-title h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .section-title p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* Contenedor de los enlaces */
+  .links-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  /* Estilo de cada tarjeta de enlace */
+  .link-card {
+    width: 250px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Efecto cuando el ratón pasa sobre la tarjeta */
+  .link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #f5f5f5;
+  }
+  
+  /* Cabecera del enlace */
+  .link-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--highlight-color);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  /* Icono dentro de la cabecera */
+  .link-header i {
+    font-size: 1.8rem;
+  }
+  
+  /* Descripción del enlace */
+  .link-card p {
+    padding: 10px;
+    color: #555;
+    font-size: 1rem;
+  }
+
+  
+
+
+  .footer {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 40px 20px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer h2, .footer h3 {
+    color: var(--card-background);
+    margin-bottom: 10px;
+  }
+  
+  .footer p, .footer a {
+    color: var(--border-color);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .footer a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer a:hover {
+    color: var(--highlight-color);
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 13px;
+    color: var(--border-color);
+  }
+
+
+  /* Animación para abrir el enlace */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
